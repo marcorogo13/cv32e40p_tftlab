@@ -1,8 +1,8 @@
 .section .text
-.global test1
-.type test1, @function
+.global test3
+.type test3, @function
 
-test1:
+test3:
 	# ABI prologue
 	addi sp, sp, -112     # allocate 112 bytes on the stack
 	sw ra, 104(sp)        # save return address
@@ -37,8 +37,8 @@ loop:
 	lw t4, 0(t1)          # load first test value
 	lw t5, 4(t1)          # load second test value
 
-	mul a0, t2, t4        # perform multiplication
-	mul a1, t3, t5        # perform multiplication
+	mulhu a0, t2, t4        # perform multiplication
+	mulhsu a1, t3, t5        # perform multiplication
 
 	#store the two results 
 
@@ -85,6 +85,7 @@ test_result_1:
 
 test_result_2:
 	.word 0x00000000
+	
 
 
 # READ-ONLY VARIABLES
