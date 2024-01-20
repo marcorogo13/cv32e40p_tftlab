@@ -28,7 +28,8 @@ test3:
 	la a2, test_result_1
 	la a3, test_result_2
 
-	li a4, 128
+	#li a4, 128
+	mv a4, a0
 	li a5, 0
 
 loop:

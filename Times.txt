@@ -1,1 +1,0 @@
-128_28_128 :  [TESTBENCH] 55910ns: test application time = 5586 clock cycles (55860 ns)
